@@ -5,6 +5,7 @@ import juzu.View;
 import juzu.template.Template;
 
 import javax.inject.Inject;
+import java.io.IOException;
 
 public class Controller {
 
@@ -12,20 +13,17 @@ public class Controller {
   @Path("index.gtmpl")
   Template index;
 
-  /*@Inject
-  @Path("oauth.gtmpl")
-  Template oauth;
 
   @View
-  public Response.Content linkedInForm(){
-    return oauth.ok();
-  }*/
-
-  @View
-  public Response.Content index(){
+  public Response.Content index() throws IOException{
     //Launch launch = new Launch();
     //ConnectionImpl connection = new ConnectionImpl();
-    popup popup = new popup();
+    //popup popup = new popup();
     return index.ok();
   }
+
+//    @Action
+//    public Response.View process() throws IOException{
+//        return Controller_.index();
+//    }
 }

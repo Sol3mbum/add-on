@@ -1,11 +1,10 @@
 @juzu.Application(defaultController = Controller.class)
-@WebJars(@WebJar("jquery"))
 @Stylesheets({@Stylesheet(value = "styles/linkedin.css")})
+@WebJars(@WebJar("jquery"))
 @Scripts({
         @Script(id = "jquery", value = "jquery/1.10.2/jquery.js"),
         @Script(value = "javascripts/popup.js", depends = "jquery")
 })
-//@Servlet("http://localhost:8080/portal/intranet/yoda/popup.java")
 @Assets("*")
 package org.juzu.addon;
 
