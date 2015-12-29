@@ -2,7 +2,6 @@ package org.juzu.addon.oauth.linkedin;
 import juzu.Path;
 import juzu.Response;
 import juzu.View;
-import juzu.template.Template;
 
 import javax.inject.Inject;
 import java.io.IOException;
@@ -11,7 +10,7 @@ public class Controller {
 
   @Inject
   @Path("index.gtmpl")
-  Template index;
+  org.juzu.addon.templates.index indexTpl;
 
 
   @View
@@ -19,7 +18,7 @@ public class Controller {
     //Launch launch = new Launch();
     //ConnectionImpl connection = new ConnectionImpl();
     //popup popup = new popup();
-    return index.ok();
+    return Response.ok("something went wrong, cannot get user info");
   }
 
 //    @Action
